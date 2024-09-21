@@ -436,6 +436,10 @@ input, textarea {
     .sectionPadding {
         padding-block: 60px;
     }
+
+    .banner-section.sectionPadding {
+        padding-top: 30px;
+    }
 }
 
 @media (max-width: 767.98px) {
