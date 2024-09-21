@@ -3,6 +3,7 @@
     --darkColor: #09245d;
     --lightBgColor: #e4f6ff;
     --whiteColor: #fff;
+    --textColor: #555;
     --transition01: .4s all;
     --bodyFonts: "Public Sans", system-ui;
     --HeadingFonts: "Play", system-ui;
@@ -70,7 +71,7 @@ a, a:focus, a:hover {
 }
 
 .primaryBtn:hover {
-    color: #fff;
+    color: var(--whiteColor);
     opacity: 0.8;
 }
 
@@ -100,11 +101,15 @@ a, a:focus, a:hover {
 }
 
 .siteHeader .nav-item .nav-link {
-    color: #000;
+    color: var(--darkColor);
     font-weight: 600;
     padding: 14px 32px;
     font-size: 16px;
     transform: var(--transition01);
+}
+
+.siteHeader .nav-item:last-child .nav-link {
+    padding-right: 0;
 }
 
 .siteHeader .nav-item .nav-link:hover {
@@ -117,32 +122,24 @@ a, a:focus, a:hover {
 }
 
 /* Banner Section*/
-
 .banner-inner{
     background-image: url(../images/bannerBg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* opacity: 0.7; */
-    /* transition: background 0.3s, border-radius 0.3s, opacity 0.3s; */
     background-attachment: scroll;
 }
 .bannerContent{
-    padding-right: 30px;
+    padding-left: 50px;
 }
 .bannerImg{
     margin: 0 0 0 -70px;
 }
 .banner-section{
     background-image: linear-gradient(0deg, var(--whiteColor) 20%, var(--lightBgColor) 60%);
-    padding: 100px 0px 100px;
-}
-.bannerContent{
-    padding-top: 50px;
-    padding-left: 50px;
 }
 .bannerContent p{
-    color: #09245db3;
+    color: var(--textColor);
     font-size: 18px;
     line-height: 1.5;
 }
@@ -159,6 +156,7 @@ a, a:focus, a:hover {
     background-color: #FFFFFF00;
     border-style: none;
     box-shadow: 0px 0px 40px 0px rgba(31.99999999999997, 97.99999999999984, 240.00000000000003, 0.35);
+    cursor: pointer;
 }
 .jkit-video-popup-btn::before, .jkit-video-popup-btn::after{
     content: " ";
@@ -216,17 +214,20 @@ a, a:focus, a:hover {
     font-size: 16px;
     color: #09245db3;
 }
+.about-content ul li i{
+    font-size: 26px;
+    margin: 0 15px 0 0;
+}
 .about-content ul li{
-    background-image: url(/assets/images/check-icon.svg);
-    background-position: left center;
-    background-repeat: no-repeat;
-    background-size: 22px 22px;
-    padding-left: 32px;
+    display: flex;
+    align-items: center;
 }
 img.dumbbell {
-    max-width: 44%;
+    max-width: 250px;
     width: 100%;
-    margin: -70px 0px -20px -100px;
+    position: absolute;
+    bottom: -90px;
+    left: -90px;
 }
 .trainex-img {
     max-width: 200px;
@@ -244,6 +245,10 @@ img.dumbbell {
     display: block;
     width: 5px;
     background-color: #848383;
+}
+.service-item {
+    padding: 32px 20px;
+    height: 100%;
 }
 .service-item img{
     max-width: 60px;
@@ -280,6 +285,11 @@ img.dumbbell {
 .content-detail h3{
     margin: -10px 0 25px;
 }
+.content-detail i {
+    font-size: 18px;
+    width: 22px;
+    margin: 0 10px 0 0;
+}
 input, textarea {
     font-size: 14px;
     resize: none;
@@ -296,6 +306,7 @@ input, textarea {
     object-fit: contain;
     width: 22px;
 }
+
 /* Footer */    
 .soc-list img{
    width: 30px;
@@ -307,6 +318,16 @@ input, textarea {
 .soc-list a{
     display: block;
 }
+.socialIcon a {
+    background: var(--darkColor);
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    border-radius: 50%;
+    color: var(--whiteColor);
+}
 @media (max-width: 1365.98px) {
     .siteHeader .nav-item .nav-link {
         padding: 14px 24px;
@@ -315,6 +336,14 @@ input, textarea {
 
     .siteHeader .nav-item .nav-link.primaryBtn {
         padding: 0px 36px;
+    }
+
+    .bannerImg {
+        margin: 0;
+    }
+
+    .bannerContent {
+        padding-left: 0;
     }
 
 }
@@ -336,6 +365,28 @@ input, textarea {
     .siteHeader .navbar-brand img {
         width: 70px;
     }
+
+    img.dumbbell {
+        max-width: 180px;
+        bottom: -80px;
+        left: -60px;
+    }
+
+    .about-img-wrap {
+        padding-left: 30px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    .sectionPadding {
+        padding-block: 80px;
+    }
 }
 
 @media (max-width: 991.98px) {
@@ -352,11 +403,6 @@ input, textarea {
 
     .siteHeader .nav-item {
         width: 100%;
-    }
-
-    .siteHeader .nav-item:last-child {
-        width: auto;
-        margin-top: 10px;
     }
 
     .siteHeader .nav-item .nav-link {
@@ -376,10 +422,25 @@ input, textarea {
     .siteHeader .navbar-brand img {
         width: 60px;
     }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h1 {
+        font-size: 44px;
+    }
+
+    .sectionPadding {
+        padding-block: 60px;
+    }
 }
 
 @media (max-width: 767.98px) {
-  
+    .bannerImg img {
+        max-width: 470px;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 575.98px) {
