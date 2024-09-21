@@ -146,6 +146,9 @@ a, a:focus, a:hover {
 .bannerContent h1{
     margin: 0 0 25px;
 }
+.banner-section.sectionPadding {
+    padding-top: 80px;
+}
 .jkit-video-popup-btn{
     padding: 0px 0px 0px 3px;
     height: 62px;
@@ -212,8 +215,8 @@ a, a:focus, a:hover {
     color: #09245db3;
 }
 .about-content ul li i{
-    font-size: 26px;
-    margin: 0 15px 0 0;
+    font-size: 20px;
+    margin: 0 10px 0 0;
 }
 .about-content ul li{
     display: flex;
@@ -262,8 +265,11 @@ img.dumbbell {
     transition: all .3s ease-in-out;
     cursor: pointer;
 }
-.classCard h5{
-    margin: 0 0 12px;
+.classCard h4{
+    color: var(--darkColor);
+}
+.classCard p {
+    color: var(--textColor);
 }
 .classCard .content{
     padding: 20px;
@@ -383,6 +389,10 @@ input, textarea {
 
     .sectionPadding {
         padding-block: 80px;
+    }
+
+    .banner-section.sectionPadding {
+        padding-top: 60px;
     }
 }
 
